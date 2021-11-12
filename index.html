@@ -18,15 +18,19 @@
        <div class="contenitore">
         <h1>promemoria</h1>
         <section class="azioni-utente">
+            <!-- 1 aggiungo il v-model per far si che il testo dell'utente venga scritto nella proprietà text dell'oggetto testoUtente.
+            2 *BONUS* aggiungo all'imput l'evento keyup in modo tale che quando venga premuto invio richiami la funzione pushToDo-->
             <input
              v-model="testoUtente.text"
+             @keyup.enter="pushToDo()"
              type="text" placeholder="Cose da fare">
+             <!-- aggiungo al bottone l'evento click in modo tale che venga chiamata la funzione pushToDo -->
             <button @click=(pushToDo())>Aggiungi</button>
         </section>
         <ul>
             <!-- creo un ciclo v-for che oltre all'oggetto mi restituisca pure l'indice -->
             <li v-for ="(toDo, index) in listaToDo">
-                <!--1 aggiungo la classe 'sbarrato' solo quando si avvera la condizione affianco. 2 aggiungo un evento click che cambia il valore della proprietà 'done' 
+                <!--1 aggiungo la classe 'sbarrato' solo quando si avvera la condizione affianco. 2 *BONUS* aggiungo un evento click che cambia il valore della proprietà 'done' 
                 -->
                 <p :class="{sbarrato: toDo.done === true}"
                    @click="toDo.done = !toDo.done">

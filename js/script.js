@@ -27,6 +27,7 @@ const app = new Vue({
 
         ],
 
+        // creo l'oggetto vuoto che verrà pushato all'interno dell'array
         testoUtente: {
             text: "",
             done: false
@@ -34,14 +35,15 @@ const app = new Vue({
     },
 
     methods:{
-        //funzione che grazie allo splice mi permette di rimuovere un solo elemento partendo dall'indice degli elementi
+        // funzione che grazie allo splice mi permette di rimuovere un solo elemento partendo dall'indice degli elementi
         rimuoviToDo(index){
             this.listaToDo.splice(index,1)
         },
-
+        // funzione che mi permette di pushiare l'oggetto compilato dall'utente nell'array
         pushToDo(){
             this.listaToDo.push(this.testoUtente);
-            this.testoUtente = '';
+            // resetto testoUtente ogni volta che aggiungo un oggetto
+            this.testoUtente= {text: "", done: false}; 
         }
     }
 
