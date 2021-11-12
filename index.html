@@ -19,27 +19,11 @@
         <h1>promemoria</h1>
         <section class="azioni-utente">
             <input type="text" placeholder="Cose da fare">
-            <ul>
-                <button>Aggiungi</button>
-            </section>
-            <li>
-                <p>Andare dal veterinario</p>
-                <i class="fas fa-times"></i>
-            </li>
-            <li>
-                <p>Prenotare il volo</p>
-                <i class="fas fa-times"></i>
-            </li>
-            <li>
-                <p>Chiamare l'albergo</p>
-                <i class="fas fa-times"></i>
-            </li>
-            <li>
-                <p>Fare la valigia</p>
-                <i class="fas fa-times"></i>
-            </li>
-            <li>
-                <p>Chiudere il gas</p>
+            <button>Aggiungi</button>
+        </section>
+        <ul>
+            <li v-for ="toDo in listaToDo">
+                <p>{{toDo.text}}</p>
                 <i class="fas fa-times"></i>
             </li>
         </ul>
