@@ -22,12 +22,17 @@
             <button>Aggiungi</button>
         </section>
         <ul>
+            <!-- creo un ciclo v-for che oltre all'oggetto mi restituisca pure l'indice -->
             <li v-for ="(toDo, index) in listaToDo">
-                <p :class="{sbarrato: toDo.done === true }"
+                <!--1 aggiungo la classe 'sbarrato' solo quando si avvera la condizione affianco. 2 aggiungo un evento click che cambia il valore della proprietà 'done' 
+                -->
+                <p :class="{sbarrato: toDo.done === true}"
                    @click="toDo.done = !toDo.done">
+                   <!-- stampo il testo all'interno di ogni oggetto -->
                    {{toDo.text}}
                 </p>
-                <i class="fas fa-times"></i>
+                <!-- aggiungo un evento click all'icona richiamando la funzione che mi permette di rimuovere l'elemento -->
+                <i @click="rimuoviToDo(index)" class="fas fa-times"></i>
             </li>
         </ul>
        </div>

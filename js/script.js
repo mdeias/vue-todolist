@@ -28,7 +28,10 @@ const app = new Vue({
     },
 
     methods:{
-
+        //funzione che grazie allo splice mi permette di rimuovere un solo elemento partendo dall'indice degli elementi
+        rimuoviToDo(index){
+            this.listaToDo.splice(index,1)
+        }
     }
 
 })
