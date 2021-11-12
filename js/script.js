@@ -23,14 +23,25 @@ const app = new Vue({
             {
                 text: "Rifornire l'auto",
                 done: false
-            },
-        ]
+            }
+
+        ],
+
+        testoUtente: {
+            text: "",
+            done: false
+        }
     },
 
     methods:{
         //funzione che grazie allo splice mi permette di rimuovere un solo elemento partendo dall'indice degli elementi
         rimuoviToDo(index){
             this.listaToDo.splice(index,1)
+        },
+
+        pushToDo(){
+            this.listaToDo.push(this.testoUtente);
+            this.testoUtente = '';
         }
     }
 

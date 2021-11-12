@@ -18,8 +18,10 @@
        <div class="contenitore">
         <h1>promemoria</h1>
         <section class="azioni-utente">
-            <input type="text" placeholder="Cose da fare">
-            <button>Aggiungi</button>
+            <input
+             v-model="testoUtente.text"
+             type="text" placeholder="Cose da fare">
+            <button @click=(pushToDo())>Aggiungi</button>
         </section>
         <ul>
             <!-- creo un ciclo v-for che oltre all'oggetto mi restituisca pure l'indice -->
@@ -34,6 +36,7 @@
                 <!-- aggiungo un evento click all'icona richiamando la funzione che mi permette di rimuovere l'elemento -->
                 <i @click="rimuoviToDo(index)" class="fas fa-times"></i>
             </li>
+            
         </ul>
        </div>
     </div>
