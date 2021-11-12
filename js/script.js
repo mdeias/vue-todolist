@@ -32,6 +32,7 @@ const app = new Vue({
             text: "",
             done: false
         }
+
     },
 
     methods:{
@@ -41,6 +42,7 @@ const app = new Vue({
         },
         // funzione che mi permette di pushiare l'oggetto compilato dall'utente nell'array
         pushToDo(){
+           
             this.listaToDo.push(this.testoUtente);
             // resetto testoUtente ogni volta che aggiungo un oggetto
             this.testoUtente= {text: "", done: false}; 

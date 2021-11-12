@@ -5,24 +5,71 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+body{
+    background-color: gray;
+}
+
 .contenitore{
     width: 50%;
-    margin: 0 auto;
+    margin: 100px auto;
+    background-color: lightgrey;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 40px;
+}
+
+.contenitore img{
+    width: 55px;
+    padding-bottom: 15px;
 }
 
 .contenitore h1{
-    text-align: center;
     text-transform: uppercase;
-    padding-top: 50px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.titolo{
+    text-align: center;
 }
 
 .azioni-utente{
     display: flex;
     justify-content: space-between;
+    margin: 30px 0px;
 }
 
 .contenitore input{
-    width: 90%;
+    width: 80%;
+    padding: 10px;
+    background-color:azure ;
+    border: 2px solid black;
+    border-radius: 15px;
+    transition: 1s;
+}
+
+input:hover{
+    background-color: white;
+    box-shadow: 1px 4px 6px  rgba(0, 0, 0, 0.2);
+}
+
+button{
+    padding: 10px 20px;
+    border: 2px solid black;
+    background-color:deepskyblue;
+    color: white;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+button:hover{
+    background-color:midnightblue;
+    transform: scale(1.1);
+}
+
+button:active{
+    background-color:midnightblue;
+    transform: scale(0.7);
 }
 
 ul{
@@ -32,10 +79,47 @@ ul{
 li{
     display: flex;
     justify-content: space-between;
+    margin-top: 13px;
+    border-bottom: 2px solid gray;
+    transition: all 1s;
+}
+
+li:hover{
+    border-color: #fff;
+}
+
+li:last-child{
+    border: none;
 }
 
 li p{
     cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
+    transition: 1s;
+}
+
+p:hover{
+    background-color: #fff;
+    transform: scale(1.2);
+}
+
+li i{
+    color:darkorange;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 2s;
+    font-weight: bold;
+}
+
+i:hover{
+    color: red;
+    transform: scale(1.1);
+}
+
+i:active{
+    color: red;
+    transform: scale(0.7);
 }
 
 .sbarrato{
