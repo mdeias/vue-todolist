@@ -2,4 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contenitore{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contenitore h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 50px;
+}
+
+.azioni-utente{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenitore input{
+    width: 90%;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
 }
