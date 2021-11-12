@@ -22,8 +22,11 @@
             <button>Aggiungi</button>
         </section>
         <ul>
-            <li v-for ="toDo in listaToDo">
-                <p>{{toDo.text}}</p>
+            <li v-for ="(toDo, index) in listaToDo">
+                <p :class="{sbarrato: toDo.done === true }"
+                   @click="toDo.done = !toDo.done">
+                   {{toDo.text}}
+                </p>
                 <i class="fas fa-times"></i>
             </li>
         </ul>
